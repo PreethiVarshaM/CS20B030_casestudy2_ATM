@@ -48,7 +48,33 @@ public class Customer extends CustomerDetails{
         setAccNum();
     }
     void reset(){
-        
+        System.out.println("Select the corresponding choices!");
+        System.out.println("1. Change UserName");
+        System.out.println("2. Change Pin");
+        System.out.println("3. Set both username and pin");
+        System.out.println("4. Proceed with existing details");
+        System.out.println("5. Exit Program");
+        int n=scan.nextInt();
+        switch(n){
+            case (1):
+                setUserName();
+                break;
+            case (2):
+                setpin();
+                break;
+            case (3):
+                setUserName();
+                setpin();
+                break;
+            case (4):
+                break;
+            case (5):
+                System.out.println("Program is terminating...");
+                System.exit(0);
+        }
+        System.out.println("The respective changes are made. Thank You!");
+        System.out.println("-------------------------------------------------------------------------------------------");
+        Menu.menu();
     }
 
 }
