@@ -1,3 +1,4 @@
+package myPackage;
 import java.util.Date; //importing all the packages required for Timer
 import java.text.ParseException;
 import java.text.SimpleDateFormat;

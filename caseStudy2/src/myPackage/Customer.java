@@ -1,3 +1,4 @@
+package myPackage;
 import java.util.*;
 abstract class CustomerDetails {
 
@@ -45,6 +46,9 @@ public class Customer extends CustomerDetails{
         setPhNum();
         setpin();
         setAccNum();
+    }
+    void reset(){
+        
     }
 
 }

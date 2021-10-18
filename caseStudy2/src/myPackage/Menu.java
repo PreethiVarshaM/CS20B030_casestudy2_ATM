@@ -1,3 +1,4 @@
+package myPackage;
 abstract class MenuStruct {
     void menu(){
 
