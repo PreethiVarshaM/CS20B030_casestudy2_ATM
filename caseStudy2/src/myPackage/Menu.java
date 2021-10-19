@@ -1,12 +1,25 @@
 package myPackage;
 import java.util.*;
 abstract class MenuStruct {
-    static ArrayList<Customer> customer = new ArrayList<>();
+    static Scanner scan=new Scanner(System.in);
+    static boolean verifyPin(Customer c){
+        boolean b=false;
+        String pin =scan.nextLine().trim();
+        if(pin.equals(c.getpin()))b=true;
+        else {
+            System.out.println("Your pin is incorrect. Please retry again!!!");
+            pin=scan.nextLine().trim();
+            if(pin.equals(c.getpin()))b=true;
+        }
+        return b;
+    }
+    
 }
 public class Menu extends MenuStruct{
     static Scanner scan=new Scanner(System.in);
+    static ArrayList<Customer> customer = new ArrayList<>();
     static void menu(){
-        System.out.println("____________________________________________________________________________________________________________________");
+        System.out.println("-------------------------------------------------------------------------------------------------------------------------------");
         System.out.println("Welcome to **2020 ATM**  BranchID: CS20B030");
         display();
     }
@@ -40,6 +53,7 @@ public class Menu extends MenuStruct{
         }
     }
     static void display(Customer c){ // for existing customer
+        System.out.println("` ` ` ` ` ` ` ` ` ` ` ` ` ` ` ` ` ` ` ` ` ` ` ` ` ` ` ` ` ` ` ` ` ` ` ` ` ` `");
         System.out.println("Choose the corresponding options.");
         System.out.println("1. View Balance ");
         System.out.println("2. Deposit amount ");
@@ -66,7 +80,10 @@ public class Menu extends MenuStruct{
             }
             else {
                 System.out.println("Wrong choice! Displaying menu again.....");
+                menu();
             }
+            System.out.println("Your request has been processed. Thankyou for availaing our services.");
+            menu();
         }
         else {
             System.out.println("Your pin is incorrect.");
@@ -87,15 +104,5 @@ public class Menu extends MenuStruct{
                 }
         }
     }
-    static boolean verifyPin(Customer c){
-        boolean b=false;
-        String pin =scan.nextLine().trim();
-        if(pin.equals(c.getpin()))b=true;
-        else {
-            System.out.println("Your pin is incorrect. Please retry again!!!");
-            pin=scan.nextLine().trim();
-            if(pin.equals(c.getpin()))b=true;
-        }
-        return b;
-    }
+    
 }

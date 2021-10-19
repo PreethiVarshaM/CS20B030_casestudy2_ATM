@@ -101,5 +101,4 @@ public class Customer extends CustomerDetails{
         System.out.println("-------------------------------------------------------------------------------------------");
         Menu.menu();
     }
-
 }
