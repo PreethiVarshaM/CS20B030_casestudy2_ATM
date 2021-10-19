@@ -13,6 +13,29 @@ abstract class MenuStruct extends Timer{
         }
         return b;
     }
+    static int OTPgenrator(){
+        Random rnd = new Random();
+        int number = rnd.nextInt(999999);
+        return number;
+    }
+    static boolean verifyOTP(){
+        boolean b=false;
+        int num=OTPgenrator();
+        System.out.println("Your OTP for verification is "+num);
+        System.out.println("Enter the OTP recieved on the screen: ");
+        int otp=scan.nextInt();scan.nextLine();
+        if(num==otp){
+            System.out.println("OTP verification successfull...");
+            b=true;
+        }
+        else {
+            System.out.println("OTP verification unsuccessfull...");
+            b=false;
+            System.out.println("Your phone Number might be wrongly linked. Please visit our nearest branch to change your phonenumber. Thankyou!!");
+            Menu.menu();
+        }
+        return b;
+    }
     
 }
 public class Menu extends MenuStruct {
@@ -48,12 +71,11 @@ public class Menu extends MenuStruct {
                     Customer cust = new Customer();
                     customer.add(cust);
                     display(cust);
-                }
-                
+                }    
         }
     }
     static void display(Customer c){ // for existing customer
-        System.out.println("-  -  -  -  -  -  -  -  -  -  -  -  -  -  -");
+        System.out.println("-  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -");
         System.out.println("Choose the corresponding options.");
         System.out.println("1. View Balance ");
         System.out.println("2. Deposit amount ");
@@ -61,7 +83,7 @@ public class Menu extends MenuStruct {
         System.out.println("4. Update or change Info - reset pin/ change username");
         int n=scan.nextInt();scan.nextLine();
         System.out.println("Enter your pin for authentication");
-        if(verifyPin(c)){
+        if(verifyPin(c)&&verifyOTP()){
             if(n==1){
                 System.out.println("Your Balance for account Number "+c.getaccNum()+" is Rs." + c.getBalance());
             }
@@ -83,7 +105,13 @@ public class Menu extends MenuStruct {
                 menu();
             }
             System.out.println("Your request has been processed. Thankyou for availaing our services.");
-            menu();
+            System.out.println("-  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -");
+            System.out.println("1. Continue and Display Transaction options. 2. End Transaction of your account");
+            int option=scan.nextInt();scan.nextLine();
+            if(option==1){
+                display(c);
+            }
+            else menu();
         }
         else {
             System.out.println("Your pin is incorrect.");

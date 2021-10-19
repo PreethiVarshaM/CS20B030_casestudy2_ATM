@@ -7,6 +7,29 @@ abstract class BankConfigStruct {
     double capacity=1000000;
     double wdlimit=40000;
     double interest=0.005;
+
+    Scanner scan=new Scanner(System.in);
+    
+    void setamount(){
+        System.out.println("Enter the amount to be added each day into the ATM: ");
+        dailyamount=scan.nextDouble();
+    }
+    void setcapacity(){
+        System.out.println("Enter the maximum capacity of the ATM: ");
+        capacity=scan.nextDouble();
+    }
+    void setinterest(){
+        System.out.println("Enter the interest rate per month of the Bank: ");
+        interest=scan.nextDouble();
+    }
+    void setwdlimit(){
+        System.out.println("Enter the withdrawal limit of the ATM: ");
+        wdlimit=scan.nextDouble();
+    }
+    void print(){
+        System.out.println("ATM configuration details:");
+        System.out.println();
+    }
 }
 public class BankConfig extends BankConfigStruct{
     Scanner scan=new Scanner(System.in);
@@ -51,24 +74,5 @@ public class BankConfig extends BankConfigStruct{
         System.out.println("The respective configurations are made. Thank You!");
         
     }
-    void setamount(){
-        System.out.println("Enter the amount to be added each day into the ATM: ");
-        dailyamount=scan.nextDouble();
-    }
-    void setcapacity(){
-        System.out.println("Enter the maximum capacity of the ATM: ");
-        capacity=scan.nextDouble();
-    }
-    void setinterest(){
-        System.out.println("Enter the interest rate per month of the Bank: ");
-        interest=scan.nextDouble();
-    }
-    void setwdlimit(){
-        System.out.println("Enter the withdrawal limit of the ATM: ");
-        wdlimit=scan.nextDouble();
-    }
-    void print(){
-        System.out.println("ATM configuration details:");
-        System.out.println();
-    }
+    
 }

@@ -29,17 +29,30 @@ abstract class CustomerDetails extends ATM{
         System.out.println("Your Phone Number is set.");
     }
     void setpin(){
-        System.out.println("Enter your Pin: ");
+        System.out.println("Enter your Pin (less than 10 characters): ");
         pin=scan.nextLine().trim();
-        System.out.println("Re-Enter Pin for verification");
+        System.out.println("Re-Enter Pin for confirmation: ");
+        String p=scan.nextLine().trim();
+        if(!(p.equals(pin))){
+            System.out.println("Your pin doesn't match please try again");
+            setpin();
+        }
+        if(pin.length()>10){
+            System.out.println("Your pin is longer than 10 characters. Please enter again");
+            setpin();
+        }
         System.out.println("Your Pin is set.");
     }
     String getpin(){
         return pin;
     }
     static void setAccNum(){
-        System.out.println("Enter your account number: ");
-        accNum=scan.nextLine();
+        System.out.println("Enter your 5 digit account number: ");
+        accNum=scan.nextLine().trim();
+        if(accNum.length()!=5){
+            System.out.println("Your account number should only be of 5 digits\n Enter again");
+            setAccNum();
+        }
         System.out.println("Your account number is set.");
     }  
     String getaccNum(){
