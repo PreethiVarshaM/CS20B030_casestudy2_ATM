@@ -65,6 +65,7 @@ public class Menu extends MenuStruct {
         System.out.println("Choose the corresponding options.");
         System.out.println("1. New Customer - Create Account ");
         System.out.println("2. Existing Customer");
+        System.out.println("3. Exit program");
         int n=scan.nextInt();scan.nextLine();
         switch(n){
             case (1):
@@ -86,7 +87,10 @@ public class Menu extends MenuStruct {
                     Customer cust = new Customer();
                     customer.add(cust);
                     display(cust);
-                }    
+                }  
+            case(3):
+                System.out.println("Terminating program...");
+                System.exit(0);
         }
     }
     static void display(Customer c){ // for existing customer
