@@ -75,7 +75,7 @@ abstract class CustomerDetails extends ATM{
             System.out.println("Sorry! you are exceeding the with drawal limit. you could only withdraw cash worth Rs."+bank.wdlimit);
             amt=bank.wdlimit;
         }
-        if(bank.Total<amt){
+        else if(bank.Total<amt){
             System.out.println("Sorry the ATM is low in cash. The Current cash in ATM is Rs."+bank.Total);
             System.out.println("Please Try with a lower amount. Thank you.");
             if(bank.Total==0){
@@ -83,6 +83,11 @@ abstract class CustomerDetails extends ATM{
                 Menu.menu();
             }
             else withdraw();
+        }
+        else if(total<amt){
+            System.out.println("You are currently low on balance. Your balance : Rs."+total);
+            System.out.println("Only Rs."+total+" can be withdrawn. Than you!");
+            amt=total;
         }
         total=total-amt;
         bank.withdrawTotal(amt);
@@ -126,7 +131,6 @@ public class Customer extends CustomerDetails{
                 System.exit(0);
         }
         System.out.println("The respective changes are made. Thank You!");
-        System.out.println("-------------------------------------------------------------------------------------------");
         Menu.menu();
     }
 }
