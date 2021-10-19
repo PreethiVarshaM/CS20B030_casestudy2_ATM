@@ -36,7 +36,6 @@ abstract class MenuStruct extends Timer{
         }
         return b;
     }
-    
 }
 public class Menu extends MenuStruct {
     static Scanner scan=new Scanner(System.in);
