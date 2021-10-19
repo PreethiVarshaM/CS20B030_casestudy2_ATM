@@ -19,6 +19,7 @@ public class Menu extends MenuStruct{
             case (1):
                 Customer c=new Customer();
                 customer.add(c);
+                display(c);
             case(2):
                 System.out.println("Enter your Username: ");
                 String user=scan.nextLine().trim();

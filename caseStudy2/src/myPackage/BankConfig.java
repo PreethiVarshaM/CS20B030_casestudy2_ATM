@@ -49,7 +49,7 @@ public class BankConfig extends BankConfigStruct{
                 System.exit(0);
         }
         System.out.println("The respective configurations are made. Thank You!");
-        System.out.println("-------------------------------------------------------------------------------------------");
+        
     }
     void setamount(){
         System.out.println("Enter the amount to be added each day into the ATM: ");
