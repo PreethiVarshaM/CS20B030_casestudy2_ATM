@@ -1,7 +1,10 @@
 package myPackage;
+import java.text.ParseException;
 import java.util.*;
-abstract class MenuStruct extends Timer{
+abstract class MenuStruct extends ATM{
     static Scanner scan=new Scanner(System.in);
+    static String d1=Timer.Date_Time(),d2=d1;
+    static long diff=0;
     static boolean verifyPin(Customer c){
         boolean b=false;
         String pin =scan.nextLine().trim();
@@ -36,6 +39,18 @@ abstract class MenuStruct extends Timer{
         }
         return b;
     }
+    static void addingMoney(){
+        d1=d2;
+        d2=Timer.Date_Time();
+        try {
+            diff+=Timer.tottime(d1, d2);
+        } catch (ParseException e) {
+            e.printStackTrace();
+            diff=0;
+        }
+        if(bank.Total<(bank.capacity-bank.dailyamount))bank.DepositTotal(bank.dailyamount*(diff/60));
+        diff=diff%60;
+    }
 }
 public class Menu extends MenuStruct {
     static Scanner scan=new Scanner(System.in);
@@ -43,6 +58,7 @@ public class Menu extends MenuStruct {
     static void menu(){
         System.out.println("--------------------------------------------------------------------------------------------------------------");
         System.out.println("Welcome to **2020 ATM**  BranchID: CS20B030");
+        addingMoney();
         display();
     }
     static void display(){ // display to choose existing customer or new customer

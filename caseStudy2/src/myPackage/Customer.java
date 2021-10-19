@@ -62,6 +62,7 @@ abstract class CustomerDetails extends ATM{
         System.out.println("Enter the amount to be deposited: ");
         double d=scan.nextDouble();
         total+=d;
+        bank.DepositTotal(d);
     }
     double getBalance(){
         return total;
@@ -70,7 +71,21 @@ abstract class CustomerDetails extends ATM{
         System.out.println("Enter the amount you want to with draw: ");
         System.out.println("Max amount that can be withdrawn = "+bank.wdlimit);
         double amt=scan.nextDouble();
+        if(amt>bank.wdlimit){
+            System.out.println("Sorry! you are exceeding the with drawal limit. you could only withdraw cash worth Rs."+bank.wdlimit);
+            amt=bank.wdlimit;
+        }
+        if(bank.Total<amt){
+            System.out.println("Sorry the ATM is low in cash. The Current cash in ATM is Rs."+bank.Total);
+            System.out.println("Please Try with a lower amount. Thank you.");
+            if(bank.Total==0){
+                System.out.println("The bank is out of cash. Sorry for inconvinience. Please visit us later");
+                Menu.menu();
+            }
+            else withdraw();
+        }
         total=total-amt;
+        bank.withdrawTotal(amt);
         System.out.println("Withdrawal of amount "+amt+" has been done.");
         System.out.println("Your balance: Rs."+total);
     }

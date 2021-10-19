@@ -28,6 +28,12 @@ abstract class BankConfigStruct {
         System.out.println("Total capacity of the ATM: Rs."+capacity);
         System.out.println("Withdrawal limit of the ATM: Rs."+wdlimit);
     }
+    void withdrawTotal(double d){
+        Total=Total-d;
+    }
+    void DepositTotal(double d){
+        Total+=d;
+    }
 }
 public class BankConfig extends BankConfigStruct{
     Scanner scan=new Scanner(System.in);
