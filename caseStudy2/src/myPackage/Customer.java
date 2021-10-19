@@ -37,11 +37,11 @@ abstract class CustomerDetails extends ATM{
             System.out.println("Your pin doesn't match please try again");
             setpin();
         }
-        if(pin.length()>10){
+        else if(pin.length()>10){
             System.out.println("Your pin is longer than 10 characters. Please enter again");
             setpin();
         }
-        System.out.println("Your Pin is set.");
+        else System.out.println("Your Pin is set.");
     }
     String getpin(){
         return pin;
