@@ -1,41 +1,66 @@
 package myPackage;
 import java.util.*;
-abstract class CustomerDetails {
+abstract class CustomerDetails extends ATM{
 
     static Scanner scan=new Scanner(System.in);
     static String customerName="null", UserName="null",AadhaarNo="null",PhNum="null",pin="null", accNum="null";
-    
+    static double total=0.0f;
     static void setName(){
         System.out.println("Enter your full Name: ");
-        customerName=scan.nextLine();
+        customerName=scan.nextLine().trim();
         System.out.println("Your name is set.");
     }
     static void setUserName(){
         System.out.println("Enter your User Name: ");
-        UserName=scan.nextLine();
+        UserName=scan.nextLine().trim();
         System.out.println("Your Username is set.");
+    }
+    String getUserName(){
+        return UserName;
     }
     static void setAadhaarNo(){
         System.out.println("Enter your Aadhaar Number: ");
-        AadhaarNo=scan.nextLine();
+        AadhaarNo=scan.nextLine().trim();
         System.out.println("Your Aadhaar Number is set.");
     }
     static void setPhNum(){
         System.out.println("Enter your phone number: ");
-        PhNum=scan.nextLine();
+        PhNum=scan.nextLine().trim();
         System.out.println("Your Phone Number is set.");
     }
-    static void setpin(){
+    void setpin(){
         System.out.println("Enter your Pin: ");
-        pin=scan.nextLine();
+        pin=scan.nextLine().trim();
         System.out.println("Re-Enter Pin for verification");
         System.out.println("Your Pin is set.");
+    }
+    String getpin(){
+        return pin;
     }
     static void setAccNum(){
         System.out.println("Enter your account number: ");
         accNum=scan.nextLine();
         System.out.println("Your account number is set.");
     }  
+    String getaccNum(){
+        return accNum;
+    }
+    void deposit(){
+        System.out.println("Enter the amount to be deposited: ");
+        double d=scan.nextDouble();
+        total+=d;
+    }
+    double getBalance(){
+        return total;
+    }
+    void withdraw(){
+        System.out.println("Enter the amount you want to with draw: ");
+        System.out.println("Max amount that can be withdrawn = "+bank.wdlimit);
+        double amt=scan.nextDouble();
+        total=total-amt;
+        System.out.println("Withdrawal of amount "+amt+" has been done.");
+        System.out.println("Your balance: Rs."+total);
+    }
 }
 public class Customer extends CustomerDetails{
 

@@ -1,6 +1,6 @@
 package myPackage;
 import java.util.*;
-public class ATM {
+public class ATM extends Menu{
     public static BankConfig bank;
     public static Menu menu=new Menu();
     public static void main(String[] args) throws Exception {
@@ -13,12 +13,12 @@ public class ATM {
         int i=scan.nextInt();
         if(i==1){
             bank=new BankConfig(1);
-            menu.menu();
+            menu();
 
         }
         else if(i==2){
             bank=new BankConfig();
-            menu.menu();
+            menu();
         }
         else {
             System.out.println("Thanks for availing our services!!!\nThe Program is terminating...");
