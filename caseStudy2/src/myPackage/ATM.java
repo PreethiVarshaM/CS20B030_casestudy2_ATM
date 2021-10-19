@@ -10,7 +10,7 @@ public class ATM extends Menu{
         System.out.println("1. Configure Bank specifications");
         System.out.println("2. Proceed with default settings");
         System.out.println("3. Exit Program");
-        int i=scan.nextInt();
+        int i=scan.nextInt();scan.nextLine();
         if(i==1){
             bank=new BankConfig(1);
             menu();

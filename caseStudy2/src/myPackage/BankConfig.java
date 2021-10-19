@@ -22,7 +22,7 @@ public class BankConfig extends BankConfigStruct{
         System.out.println("5. Proceed with default settings");
         System.out.println("6. Set all of the above fields");
         System.out.println("7. Exit Program");
-        int n=scan.nextInt();
+        int n=scan.nextInt();scan.nextLine();
         switch(n){
             case (1):
                 setamount();
@@ -66,5 +66,9 @@ public class BankConfig extends BankConfigStruct{
     void setwdlimit(){
         System.out.println("Enter the withdrawal limit of the ATM: ");
         wdlimit=scan.nextDouble();
+    }
+    void print(){
+        System.out.println("ATM configuration details:");
+        System.out.println();
     }
 }

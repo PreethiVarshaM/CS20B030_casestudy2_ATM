@@ -79,7 +79,7 @@ public class Customer extends CustomerDetails{
         System.out.println("3. Set both username and pin");
         System.out.println("4. Proceed with existing details");
         System.out.println("5. Exit Program");
-        int n=scan.nextInt();
+        int n=scan.nextInt();scan.nextLine();
         switch(n){
             case (1):
                 setUserName();

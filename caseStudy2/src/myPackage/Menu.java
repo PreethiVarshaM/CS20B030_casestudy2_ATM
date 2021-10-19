@@ -1,6 +1,6 @@
 package myPackage;
 import java.util.*;
-abstract class MenuStruct {
+abstract class MenuStruct extends Timer{
     static Scanner scan=new Scanner(System.in);
     static boolean verifyPin(Customer c){
         boolean b=false;
@@ -15,11 +15,11 @@ abstract class MenuStruct {
     }
     
 }
-public class Menu extends MenuStruct{
+public class Menu extends MenuStruct {
     static Scanner scan=new Scanner(System.in);
     static ArrayList<Customer> customer = new ArrayList<>();
     static void menu(){
-        System.out.println("-------------------------------------------------------------------------------------------------------------------------------");
+        System.out.println("--------------------------------------------------------------------------------------------------------------");
         System.out.println("Welcome to **2020 ATM**  BranchID: CS20B030");
         display();
     }
@@ -27,7 +27,7 @@ public class Menu extends MenuStruct{
         System.out.println("Choose the corresponding options.");
         System.out.println("1. New Customer - Create Account ");
         System.out.println("2. Existing Customer");
-        int n=scan.nextInt();
+        int n=scan.nextInt();scan.nextLine();
         switch(n){
             case (1):
                 Customer c=new Customer();
@@ -53,13 +53,13 @@ public class Menu extends MenuStruct{
         }
     }
     static void display(Customer c){ // for existing customer
-        System.out.println("` ` ` ` ` ` ` ` ` ` ` ` ` ` ` ` ` ` ` ` ` ` ` ` ` ` ` ` ` ` ` ` ` ` ` ` ` ` `");
+        System.out.println("-  -  -  -  -  -  -  -  -  -  -  -  -  -  -");
         System.out.println("Choose the corresponding options.");
         System.out.println("1. View Balance ");
         System.out.println("2. Deposit amount ");
         System.out.println("3. WithDraw ");
         System.out.println("4. Update or change Info - reset pin/ change username");
-        int n=scan.nextInt();
+        int n=scan.nextInt();scan.nextLine();
         System.out.println("Enter your pin for authentication");
         if(verifyPin(c)){
             if(n==1){
@@ -91,7 +91,7 @@ public class Menu extends MenuStruct{
                 System.out.println("1. Reset Pin");
                 System.out.println("2. Return to main menu");
                 System.out.println("3. Exit program");
-                int no=scan.nextInt();
+                int no=scan.nextInt();scan.nextLine();
                 if(no==1){
                     c.setpin();
                 }
