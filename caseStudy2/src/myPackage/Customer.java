@@ -43,6 +43,10 @@ abstract class CustomerDetails extends ATM{
         }
         else System.out.println("Your Pin is set.");
     }
+    void setTotal(){
+        System.out.println("Enter your account balance: Rs.");
+        total=scan.nextDouble();scan.nextLine();
+    }
     String getpin(){
         return pin;
     }
@@ -104,6 +108,7 @@ public class Customer extends CustomerDetails{
         setPhNum();
         setpin();
         setAccNum();
+        setTotal();
     }
     void reset(){
         System.out.println("Select the corresponding choices!");
