@@ -57,7 +57,7 @@ abstract class CustomerDetails extends ATM{
             System.out.println("Your account number should only be of 5 digits\n Enter again");
             setAccNum();
         }
-        System.out.println("Your account number is set.");
+        else System.out.println("Your account number is set.");
     }  
     String getaccNum(){
         return accNum;
