@@ -65,8 +65,32 @@ abstract class CustomerDetails extends ATM{
     void deposit(){
         System.out.println("Enter the amount to be deposited: ");
         double d=scan.nextDouble();
-        total+=d;
-        bank.DepositTotal(d);
+        double tot;
+        int n2000,n500,n200,n100,n50,n20,n10;
+        System.out.println("Enter your cash denominations (if not then enter '0') : ");
+        System.out.println("1. Number of 2000 notes: ");
+        n2000=scan.nextInt();scan.nextLine();
+        System.out.println("1. Number of 500 notes: ");
+        n500=scan.nextInt();scan.nextLine();
+        System.out.println("1. Number of 200 notes: ");
+        n200=scan.nextInt();scan.nextLine();
+        System.out.println("1. Number of 100 notes: ");
+        n100=scan.nextInt();scan.nextLine();
+        System.out.println("1. Number of 50 notes: ");
+        n50=scan.nextInt();scan.nextLine();
+        System.out.println("1. Number of 20 notes: ");
+        n20=scan.nextInt();scan.nextLine();
+        System.out.println("1. Number of 10 notes: ");
+        n10=scan.nextInt();scan.nextLine();
+        tot=n2000*2000+n500*500+n200*200+n100*100+n50*50+n20*20+n10*10;
+        if(tot!=d){
+            System.out.println("Your denominations is not matching the deposit amount. Please Enter deposit amount again!");
+            deposit();
+        }
+        else {
+            total+=d;
+            bank.DepositTotal(d);
+        }    
     }
     double getBalance(){
         return total;
