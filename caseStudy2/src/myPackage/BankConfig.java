@@ -1,13 +1,16 @@
 package myPackage;
 import java.util.Scanner;
 
-abstract class BankConfigStruct {
+abstract class BankConfigStruct { 
+    // abstract class hides all config details ... so user can only set inital values and can't mess with default values
     double Total=1000000;
-    double dailyamount=100000;
+    double dailyamount=100000; //amount added to the ATM daily
     double capacity=1000000;
-    double wdlimit=40000;
+    double wdlimit=40000; // withdrawal limit
 
     Scanner scan=new Scanner(System.in);
+
+    //various methods to set ATM configurations
 
     void setamount(){
         System.out.println("Enter the amount to be added each day into the ATM: ");
@@ -29,10 +32,10 @@ abstract class BankConfigStruct {
         System.out.println("Withdrawal limit of the ATM: Rs."+wdlimit);
     }
     void withdrawTotal(double d){
-        Total=Total-d;
+        Total=Total-d; // decreasing total amount in the bank when there is a withdrawal
     }
     void DepositTotal(double d){
-        Total+=d;
+        Total+=d; // incrementing the total in the ATM when there is a user deposit or daily deposit
     }
 }
 public class BankConfig extends BankConfigStruct{
