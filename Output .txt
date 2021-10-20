@@ -1,3 +1,5 @@
+// output displaying most of the possible functionalities
+
 Welcome to **2020 ATM**  BranchID: CS20B030
 Choose the number corresponding to the desired option
 1. Configure Bank specifications
