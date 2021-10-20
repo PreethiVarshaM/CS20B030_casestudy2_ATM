@@ -1,10 +1,13 @@
 package myPackage;
 import java.text.ParseException;
 import java.util.*;
+
+// abstraction is used to hide important implementation details menu
 abstract class MenuStruct extends ATM{
     static Scanner scan=new Scanner(System.in);
     static String d1=Timer.Date_Time(),d2=d1;
     static long diff=0;
+    //method to verify pin
     static boolean verifyPin(Customer c){
         boolean b=false;
         String pin =scan.nextLine().trim();
@@ -16,11 +19,13 @@ abstract class MenuStruct extends ATM{
         }
         return b;
     }
+    //method to generate otp
     static int OTPgenrator(){
         Random rnd = new Random();
         int number = rnd.nextInt(999999);
         return number;
     }
+    //method to verify otp
     static boolean verifyOTP(){
         boolean b=false;
         int num=OTPgenrator();
@@ -39,6 +44,8 @@ abstract class MenuStruct extends ATM{
         }
         return b;
     }
+    // method to add money in the ATM daily
+    // here 2 minute == 1 day in real time
     static void addingMoney(){
         d1=d2;
         d2=Timer.Date_Time();
@@ -48,19 +55,24 @@ abstract class MenuStruct extends ATM{
             e.printStackTrace();
             diff=0;
         }
+        //money is added only if the ATM has less capacity than its maximum limit
         if(bank.Total<(bank.capacity-bank.dailyamount))bank.DepositTotal(bank.dailyamount*(diff/60));
         diff=diff%60;
     }
 }
+
 public class Menu extends MenuStruct {
     static Scanner scan=new Scanner(System.in);
+    //array list to store user list
     static ArrayList<Customer> customer = new ArrayList<>();
+
     static void menu(){
         System.out.println("--------------------------------------------------------------------------------------------------------------");
         System.out.println("Welcome to **2020 ATM**  BranchID: CS20B030");
         addingMoney();
         display();
     }
+    // polymorphism is used in case of display() and display(Customer c)
     static void display(){ // display to choose existing customer or new customer
         System.out.println("Choose the corresponding options.");
         System.out.println("1. New Customer - Create Account ");

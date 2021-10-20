@@ -41,9 +41,11 @@ abstract class BankConfigStruct {
 public class BankConfig extends BankConfigStruct{
     Scanner scan=new Scanner(System.in);
     BankConfig(){
+        //to display bank settings
         print();
     }
     BankConfig(int x){
+        // list to determine what changes in ATM configuration the user wants
         System.out.println("Select the corresponding choices!");
         System.out.println("1. Change amount added each day");
         System.out.println("2. Set maximum capacity of the ATM");

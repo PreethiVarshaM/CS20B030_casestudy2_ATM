@@ -1,10 +1,11 @@
 package myPackage;
 import java.util.*;
-abstract class CustomerDetails extends ATM{
-
+abstract class CustomerDetails extends ATM{ 
+    //acts as a skeletal structure for customer object to note different details
     static Scanner scan=new Scanner(System.in);
     static String customerName="null", UserName="null",AadhaarNo="null",PhNum="null",pin="null", accNum="null";
     static double total=0.0f;
+    //setter methods for various customer details
     static void setName(){
         System.out.println("Enter your full Name: ");
         customerName=scan.nextLine().trim();
@@ -47,6 +48,7 @@ abstract class CustomerDetails extends ATM{
         System.out.println("Enter your account balance: Rs.");
         total=scan.nextDouble();scan.nextLine();
     }
+    //getter method for pin
     String getpin(){
         return pin;
     }
@@ -58,10 +60,14 @@ abstract class CustomerDetails extends ATM{
             setAccNum();
         }
         else System.out.println("Your account number is set.");
-    }  
+    } 
+    // getter method for account number 
     String getaccNum(){
         return accNum;
     }
+    // method to perform desposit
+    // - change amount in ATM
+    //- change amount in user account
     void deposit(){
         System.out.println("Enter the amount to be deposited: ");
         double d=scan.nextDouble();
@@ -92,9 +98,14 @@ abstract class CustomerDetails extends ATM{
             bank.DepositTotal(d);
         }    
     }
+    // method to get balance of the user
     double getBalance(){
         return total;
     }
+
+    // method to perform withdrawal
+    // - change amount in ATM
+    //- change amount in user account
     void withdraw(){
         System.out.println("Enter the amount you want to with draw: ");
         System.out.println("Max amount that can be withdrawn = "+bank.wdlimit);
@@ -122,18 +133,7 @@ abstract class CustomerDetails extends ATM{
         System.out.println("Withdrawal of amount "+amt+" has been done.");
         System.out.println("Your balance: Rs."+total);
     }
-}
-public class Customer extends CustomerDetails{
-
-    Customer(){
-        setName();
-        setUserName();
-        setAadhaarNo();
-        setPhNum();
-        setpin();
-        setAccNum();
-        setTotal();
-    }
+    // to change username and pin of the user
     void reset(){
         System.out.println("Select the corresponding choices!");
         System.out.println("1. Change UserName");
@@ -161,5 +161,20 @@ public class Customer extends CustomerDetails{
         }
         System.out.println("The respective changes are made. Thank You!");
         Menu.menu();
+    }
+}
+
+//used abstraction to hide all the functionalities and procedure of user
+public class Customer extends CustomerDetails{
+
+    // constructor to allow for storing of user info when new customer object is created
+    Customer(){
+        setName();
+        setUserName();
+        setAadhaarNo();
+        setPhNum();
+        setpin();
+        setAccNum();
+        setTotal();
     }
 }
