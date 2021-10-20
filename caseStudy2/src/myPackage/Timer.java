@@ -9,7 +9,6 @@ public class Timer {
     Date date=new Date();
     return formatter.format(date).trim();//date as string
     }
-
     public static long tottime(String d1,String d2) throws ParseException // to give output in seconds
     {
         SimpleDateFormat formatter = new SimpleDateFormat("dd-MM-yyyy/HH:mm:ss");
