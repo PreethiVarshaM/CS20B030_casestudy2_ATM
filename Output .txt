@@ -2,7 +2,7 @@ Welcome to **2020 ATM**  BranchID: CS20B030
 Choose the number corresponding to the desired option
 1. Configure Bank specifications
 2. Proceed with default settings
-3. Exit Program
+3. Exit Program - ~Terminate~
 1
 Select the corresponding choices! 
 1. Change amount added each day   
@@ -15,9 +15,9 @@ Select the corresponding choices!
 Enter the amount to be added each day into the ATM: 
 100
 Enter the maximum capacity of the ATM: 
-500
+1000
 Enter the withdrawal limit of the ATM: 
-100
+200
 The respective configurations are made. Thank You!
 --------------------------------------------------------------------------------------------------------------
 Welcome to **2020 ATM**  BranchID: CS20B030
@@ -27,10 +27,10 @@ Choose the corresponding options.
 3. Exit program
 2
 Enter your Username: 
-pp
+PP
 User does not exist. Creating a new account:
 Enter your full Name:
-pp
+PV
 Your name is set.
 Enter your User Name:
 p
@@ -39,13 +39,8 @@ Enter your Aadhaar Number:
 1234 5678 1234
 Your Aadhaar Number is set.
 Enter your phone number:
-12334567890
-Your Phone Number is set.
-Enter your Pin (less than 10 characters):
-1234567890987
-Re-Enter Pin for confirmation: 
 1234567890
-Your pin doesn't match please try again
+Your Phone Number is set.
 Enter your Pin (less than 10 characters):
 12345678900
 Re-Enter Pin for confirmation: 
@@ -54,12 +49,13 @@ Your pin is longer than 10 characters. Please enter again
 Enter your Pin (less than 10 characters):
 123
 Re-Enter Pin for confirmation: 
+1234
+Your pin doesn't match please try again
+Enter your Pin (less than 10 characters):
+123
+Re-Enter Pin for confirmation: 
 123
 Your Pin is set.
-Enter your 5 digit account number:
-123456
-Your account number should only be of 5 digits
- Enter again
 Enter your 5 digit account number:
 12345
 Your account number is set.
@@ -74,9 +70,27 @@ Choose the corresponding options.
 1
 Enter your pin for authentication
 123
-Your OTP for verification is 939126
+Your OTP for verification is 55426
 Enter the OTP recieved on the screen:
-939126
+55426
+OTP verification successfull...
+Your Balance for account Number 12345 is Rs.100.0
+Your request has been processed. Thankyou for availaing our services.
+-  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -
+1. Continue and Display Transaction options. 2. End Transaction of your account
+1
+-  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -
+Choose the corresponding options.
+1. View Balance
+2. Deposit amount
+3. WithDraw
+4. Update or change Info - reset pin/ change username
+1
+Enter your pin for authentication
+123
+Your OTP for verification is 625400
+Enter the OTP recieved on the screen:
+625400
 OTP verification successfull...
 Your Balance for account Number 12345 is Rs.100.0
 Your request has been processed. Thankyou for availaing our services.
@@ -92,173 +106,45 @@ Choose the corresponding options.
 2
 Enter your pin for authentication
 123
-Your OTP for verification is 534189
+Your OTP for verification is 64427
 Enter the OTP recieved on the screen:
-534189
+64427
 OTP verification successfull...
 Enter the amount to be deposited:
-10
-Your request has been processed. Thankyou for availaing our services.
--  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -
-1. Continue and Display Transaction options. 2. End Transaction of your account
-1
--  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -
-Choose the corresponding options.
-1. View Balance
-2. Deposit amount
-3. WithDraw
-4. Update or change Info - reset pin/ change username
-1
-Enter your pin for authentication
-123
-Your OTP for verification is 805349
-Enter the OTP recieved on the screen:
-805349
-OTP verification successfull...
-Your Balance for account Number 12345 is Rs.110.0
-Your request has been processed. Thankyou for availaing our services.
--  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -
-1. Continue and Display Transaction options. 2. End Transaction of your account
-1
--  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -
-Choose the corresponding options.
-1. View Balance
-2. Deposit amount
-3. WithDraw
-4. Update or change Info - reset pin/ change username
-3
-Enter your pin for authentication
-123
-Your OTP for verification is 254406
-Enter the OTP recieved on the screen:
-254406
-OTP verification successfull...
-Enter the amount you want to with draw:
-Max amount that can be withdrawn = 100.0
-110
-Sorry! you are exceeding the with drawal limit. you could only withdraw cash worth Rs.100.0
-Withdrawal of amount 100.0 has been done.
-Your balance: Rs.10.0
-Your request has been processed. Thankyou for availaing our services.
--  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -
-1. Continue and Display Transaction options. 2. End Transaction of your account
-1
--  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -
-Choose the corresponding options.
-1. View Balance
-2. Deposit amount
-3. WithDraw
-4. Update or change Info - reset pin/ change username
-3
-Enter your pin for authentication
-123
-Your OTP for verification is 616937
-Enter the OTP recieved on the screen:
-616937
-OTP verification successfull...
-Enter the amount you want to with draw:
-Max amount that can be withdrawn = 100.0
 100
-You are currently low on balance. Your balance : Rs.10.0
-Only Rs.10.0 can be withdrawn. Than you!
-Withdrawal of amount 10.0 has been done.
-Your balance: Rs.0.0
-Your request has been processed. Thankyou for availaing our services.
--  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -
-1. Continue and Display Transaction options. 2. End Transaction of your account
+Enter your cash denominations (if not then enter '0') : 
+1. Number of 2000 notes:
+0
+1. Number of 500 notes: 
 1
--  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -
-Choose the corresponding options.
-1. View Balance
-2. Deposit amount
-3. WithDraw
-4. Update or change Info - reset pin/ change username
-3
-Enter your pin for authentication
-123
-Your OTP for verification is 379378
-Enter the OTP recieved on the screen:
-379378
-OTP verification successfull...
-Enter the amount you want to with draw:
-Max amount that can be withdrawn = 100.0
+1. Number of 200 notes: 
+0
+1. Number of 100 notes: 
+0
+1. Number of 50 notes: 
+0
+1. Number of 20 notes: 
+0
+1. Number of 10 notes: 
+0
+Your denominations is not matching the deposit amount. Please Enter deposit amount again!
+Enter the amount to be deposited:
 100
-You are currently low on balance. Your balance : Rs.0.0
-Only Rs.0.0 can be withdrawn. Than you!
-Withdrawal of amount 0.0 has been done.
-Your balance: Rs.0.0
-Your request has been processed. Thankyou for availaing our services.
--  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -
-1. Continue and Display Transaction options. 2. End Transaction of your account
-2
---------------------------------------------------------------------------------------------------------------
-Welcome to **2020 ATM**  BranchID: CS20B030
-Choose the corresponding options.
-1. New Customer - Create Account
-2. Existing Customer
-3. Exit program
+Enter your cash denominations (if not then enter '0') : 
+1. Number of 2000 notes:
+0
+1. Number of 500 notes: 
+0
+1. Number of 200 notes: 
+0
+1. Number of 100 notes: 
 1
-Enter your full Name: 
-Your name is set.
-Enter your User Name:
-v 
-Your Username is set.
-Enter your Aadhaar Number:
-1234 5678 9012
-Your Aadhaar Number is set.
-Enter your phone number:
-1234567809
-Your Phone Number is set.
-Enter your Pin (less than 10 characters):
-12
-Re-Enter Pin for confirmation: 
-12
-Your Pin is set.
-Enter your 5 digit account number:
-34567
-Your account number is set.
-Enter your account balance: Rs.
-200
--  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -
-Choose the corresponding options.
-1. View Balance
-2. Deposit amount
-3. WithDraw
-4. Update or change Info - reset pin/ change username
-3
-Enter your pin for authentication
-12 
-Your OTP for verification is 242271
-Enter the OTP recieved on the screen:
-242271
-OTP verification successfull...
-Enter the amount you want to with draw:
-Max amount that can be withdrawn = 100.0
-50 
-Withdrawal of amount 50.0 has been done.
-Your balance: Rs.150.0
-Your request has been processed. Thankyou for availaing our services.
--  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -
-1. Continue and Display Transaction options. 2. End Transaction of your account
-1
--  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -
-Choose the corresponding options.
-1. View Balance
-2. Deposit amount
-3. WithDraw
-4. Update or change Info - reset pin/ change username
-3
-Enter your pin for authentication
-12
-Your OTP for verification is 96400
-Enter the OTP recieved on the screen:
-96400
-OTP verification successfull...
-Enter the amount you want to with draw:
-Max amount that can be withdrawn = 100.0
-100
-Withdrawal of amount 100.0 has been done.
-Your balance: Rs.50.0
+1. Number of 50 notes: 
+0
+1. Number of 20 notes: 
+0
+1. Number of 10 notes: 
+0
 Your request has been processed. Thankyou for availaing our services.
 -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -
 1. Continue and Display Transaction options. 2. End Transaction of your account
@@ -271,10 +157,10 @@ Choose the corresponding options.
 4. Update or change Info - reset pin/ change username
 4
 Enter your pin for authentication
-12
-Your OTP for verification is 461770
+123
+Your OTP for verification is 736121
 Enter the OTP recieved on the screen:
-461770
+736121
 OTP verification successfull...
 Select the corresponding choices!
 1. Change UserName
@@ -283,15 +169,94 @@ Select the corresponding choices!
 4. Proceed with existing details
 5. Exit Program
 3
-Enter your User Name:
-vv
+Enter your User Name: 
+pv
 Your Username is set.
 Enter your Pin (less than 10 characters):
-124
-Re-Enter Pin for confirmation:
-124
+12
+Re-Enter Pin for confirmation: 
+12
 Your Pin is set.
 The respective changes are made. Thank You!
+--------------------------------------------------------------------------------------------------------------
+Welcome to **2020 ATM**  BranchID: CS20B030
+Choose the corresponding options.
+1. New Customer - Create Account
+2. Existing Customer
+3. Exit program
+2
+Enter your Username: 
+pv
+-  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -
+Choose the corresponding options.
+1. View Balance
+2. Deposit amount
+3. WithDraw
+4. Update or change Info - reset pin/ change username
+3
+Enter your pin for authentication
+12
+Your OTP for verification is 31481
+Enter the OTP recieved on the screen:
+31481
+OTP verification successfull...
+Enter the amount you want to with draw:
+Max amount that can be withdrawn = 200.0
+300
+Sorry! you are exceeding the with drawal limit. you could only withdraw cash worth Rs.200.0
+Withdrawal of amount 200.0 has been done.
+Your balance: Rs.0.0
+Your request has been processed. Thankyou for availaing our services.
+-  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -
+1. Continue and Display Transaction options. 2. End Transaction of your account
+1
+-  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -
+Choose the corresponding options.
+1. View Balance
+2. Deposit amount
+3. WithDraw
+4. Update or change Info - reset pin/ change username
+3
+Enter your pin for authentication
+12
+Your OTP for verification is 95501
+Enter the OTP recieved on the screen:
+1
+OTP verification unsuccessfull...
+Your phone Number might be wrongly linked. Please visit our nearest branch to change your phonenumber. Thankyou!!
+--------------------------------------------------------------------------------------------------------------
+Welcome to **2020 ATM**  BranchID: CS20B030
+Choose the corresponding options.
+1. New Customer - Create Account
+2. Existing Customer
+3. Exit program
+2
+Enter your Username: 
+pv
+-  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -
+Choose the corresponding options.
+1. View Balance
+2. Deposit amount
+3. WithDraw
+4. Update or change Info - reset pin/ change username
+3
+Enter your pin for authentication
+12
+Your OTP for verification is 578938
+Enter the OTP recieved on the screen:
+578938
+OTP verification successfull...
+Enter the amount you want to with draw:
+Max amount that can be withdrawn = 200.0
+100
+You are currently low on balance. Your balance : Rs.0.0
+Only Rs.0.0 can be withdrawn. Than you!
+Withdrawal of amount 0.0 has been done.
+Your balance: Rs.0.0
+Your request has been processed. Thankyou for availaing our services.
+-  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -
+1. Continue and Display Transaction options. 2. End Transaction of your account
+2
 --------------------------------------------------------------------------------------------------------------
 Welcome to **2020 ATM**  BranchID: CS20B030
 Choose the corresponding options.
