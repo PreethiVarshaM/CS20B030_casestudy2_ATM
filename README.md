@@ -7,4 +7,4 @@ CS20B030 - Preethi Varsha Marivina
                  - instead of giving a predefined list in the program
 >> Assumption 3: OTP is displayed on the screen itself
 
-**To run the program follow the instructions displayed**
+**To start the program run ATM.java and proceed with the instructions displayed on the screen**
